@@ -24,10 +24,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      
-  myjob:
-    docker:
-      - image: cimg/base:2021.04
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
