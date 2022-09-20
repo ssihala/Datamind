@@ -6,9 +6,10 @@ jobs:
       - image: cimg/base:2021.04 #TODO
     steps:
       - checkout
-      - run:
-          name: Install dependencies and build project
-          command: install#TODO 
+      #TODO: INSTALL DEPENDENCIES
+      #- run:
+          #name: Install dependencies and build project
+          #command: install
       - sonarcloud/scan
 
 orbs:
