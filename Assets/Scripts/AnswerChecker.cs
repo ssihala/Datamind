@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,15 +8,16 @@ using TMPro;
 // Aka if the question is 2 + 2, check for the correct answer
 public class AnswerChecker : MonoBehaviour
 {
-    public int expectedAnswer;
+    public int expectedAnswer = 0;
     public GameObject input;
     void checkInput()
     {
         string ans = input.GetComponent<TMP_InputField>().text;
+        expectedAnswer = QuestionGenerator.questions.ElementAt(QuestionGenerator.randomIndex).Value;
         if (ans == expectedAnswer.ToString())
         {
             // Answer is correct, do something based on the answer being right
-            Debug.Log("TEXT IS EQUAL");
+            DialogueBox.erase = true;
         }
         else
         {
