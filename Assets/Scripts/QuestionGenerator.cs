@@ -83,6 +83,12 @@ public class QuestionGenerator : MonoBehaviour
     void Start()
     {
         initializeQuestions();
+        if (randomize)
+        {
+            randomIndex = Random.Range(0, questions.Count);
+            Debug.Log(randomIndex);
+            randomize = false;
+        }
     }
 
     // Update is called once per frame

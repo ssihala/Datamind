@@ -45,7 +45,6 @@ public class DialogueBox : MonoBehaviour
             if (erase)
             {
                 gameObject.SetActive(false);
-                
             }
     }
 
