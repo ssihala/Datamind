@@ -28,10 +28,10 @@ public class DialogueBox : MonoBehaviour
         {
             string toAdd = "What is " + QuestionGenerator.questions.ElementAt(QuestionGenerator.randomIndex).Key + "?";
             lines.Add(toAdd);
-            init = false;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || init)
         {
+            init = false;
             if (textComponent.text == lines[index])
             {
                 NextLine();
@@ -45,6 +45,7 @@ public class DialogueBox : MonoBehaviour
             if (erase)
             {
                 gameObject.SetActive(false);
+                
             }
     }
 

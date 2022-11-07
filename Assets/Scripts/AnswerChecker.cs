@@ -18,6 +18,7 @@ public class AnswerChecker : MonoBehaviour
         {
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
+            gameObject.SetActive(false);
         }
         else
         {
