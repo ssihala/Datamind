@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   init: 1
-  difficulty: 1
+  difficulty: 4
 --- !u!212 &1187730287
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -54,8 +54,9 @@ public class QuestionGenerator : MonoBehaviour
             for(int j = 1; j <= maxVal; j++)
             {
                 currExpression = i.ToString();
-                string op = " + ";
-                currExpression += op;
+                currExpression += ' ';
+                currExpression += operand;
+                currExpression += ' ';
                 currExpression += j.ToString();
                 switch (operand)
                 {
@@ -74,6 +75,58 @@ public class QuestionGenerator : MonoBehaviour
                 if(answer >= 0)
                 {
                     questions.Add(currExpression, answer);
+                }
+                if(operand2 != ' ')
+                {
+                    currExpression = i.ToString();
+                    currExpression += ' ';
+                    currExpression += operand2;
+                    currExpression += ' ';
+                    currExpression += j.ToString();
+                    switch (operand2)
+                    {
+                        case '+':
+                            answer = i + j;
+                            break;
+                        case '-':
+                            answer = i - j;
+                            break;
+                        case '*':
+                            answer = i * j;
+                            break;
+
+                    }
+                    // non-negative questions only
+                    if (answer >= 0)
+                    {
+                        questions.Add(currExpression, answer);
+                    }
+                    if(operand3 != ' ')
+                    {
+                        currExpression = i.ToString();
+                        currExpression += ' ';
+                        currExpression += operand3;
+                        currExpression += ' ';
+                        currExpression += j.ToString();
+                        switch (operand3)
+                        {
+                            case '+':
+                                answer = i + j;
+                                break;
+                            case '-':
+                                answer = i - j;
+                                break;
+                            case '*':
+                                answer = i * j;
+                                break;
+
+                        }
+                        // non-negative questions only
+                        if (answer >= 0)
+                        {
+                            questions.Add(currExpression, answer);
+                        }
+                    }
                 }
                 currExpression = "";
             }
