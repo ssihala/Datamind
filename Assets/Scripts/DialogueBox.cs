@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
 
 public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    public List<string> lines = new List<string>();
+    bool init = true;
+    public static bool erase = false;
     public float textSpeed;
 
     private int index;
@@ -21,6 +24,12 @@ public class DialogueBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(init)
+        {
+            string toAdd = "What is " + QuestionGenerator.questions.ElementAt(QuestionGenerator.randomIndex).Key + "?";
+            lines.Add(toAdd);
+            init = false;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
@@ -33,6 +42,10 @@ public class DialogueBox : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+            if (erase)
+            {
+                gameObject.SetActive(false);
+            }
     }
 
     void StartDialogue()
@@ -43,7 +56,7 @@ public class DialogueBox : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (string c in lines)
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -51,16 +64,12 @@ public class DialogueBox : MonoBehaviour
     }
 
     void NextLine()
-    {
-        if(index < lines.Length - 1)
+    { 
+        if(index < lines.Count - 1)
         {
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
-        }
-        else
-        {
-            gameObject.SetActive(false);
         }
     }
 }
