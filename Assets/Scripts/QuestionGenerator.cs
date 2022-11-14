@@ -22,33 +22,40 @@ public class QuestionGenerator : MonoBehaviour
     {
         switch(difficulty)
         {
+            // setting 1: Only Addition
             case 1:
                 operand = '+';
                 maxVal = 15;
                 break;
             case 2:
+            // setting 2: Only Subtraction
                 operand = '-';
                 maxVal = 15;
                 break;
             case 3:
+            // setting 3: Addition and Subtraction
                 operand = '+';
                 operand2 = '-';
                 maxVal = 50;
                 break;
             case 4:
+            // setting 4: Multiplication
                 operand = '*';
                 maxVal = 12;
                 break;
             case 5:
+            // setting 5: All three (go crazy go stupid aaaahhh)
                 operand = '+';
                 operand2 = '-';
                 operand3 = '*';
+                // need to set a second maxVal to account for mult.
                 maxVal = 12;
                 break;
             default:
                 // Error message bc difficulty is not set
                 break;
         }
+        // makes the questions w min/max values
         for(int i = 1; i <= maxVal; i++)
         {
             for(int j = 1; j <= maxVal; j++)
@@ -134,8 +141,9 @@ public class QuestionGenerator : MonoBehaviour
         return;
     }
     void Start()
-    {
+    { 
         initializeQuestions();
+        // if we need to get a random question...
         if (randomize)
         {
             randomIndex = Random.Range(0, questions.Count);
@@ -147,12 +155,13 @@ public class QuestionGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(randomize)
+        // if we need to get a random question...
+        if (randomize)
         {
             randomIndex = Random.Range(0, questions.Count);
             Debug.Log(randomIndex);
             randomize = false;
         }
+        }
         
     }
-}
