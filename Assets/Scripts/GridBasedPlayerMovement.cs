@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridBasedPlayerMovement : MonoBehaviour
 {
-    Rigidbody body;
+    Rigidbody2D body;
 
     float horizontal;
     float vertical;
@@ -14,7 +14,7 @@ public class GridBasedPlayerMovement : MonoBehaviour
 
     void Start()
     {
-        body = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     void Update()
