@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Old detection script, use TestCollider from now on (need to rename)
 public class EnemyDetection : MonoBehaviour
 {
     public GameObject player;

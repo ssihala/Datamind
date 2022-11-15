@@ -200,6 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5091687561119850647}
+  - component: {fileID: 2136280355}
   m_Layer: 0
   m_Name: Question Box
   m_TagString: Untagged
@@ -214,7 +215,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5091687561119850644}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -94.21701, y: -128.03601, z: -3.6111884}
   m_LocalScale: {x: 1.8991097, y: 1.8991097, z: 1.8991097}
   m_ConstrainProportionsScale: 0
@@ -224,6 +225,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136280355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5091687561119850644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2412543d75d7e4d4bb03a22db6b50aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 5091687561843368776}
+  lines: []
+  textSpeed: 0
 --- !u!1 &5091687561413082751
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +251,6 @@ GameObject:
   - component: {fileID: 5091687561413082750}
   - component: {fileID: 5091687561413082747}
   - component: {fileID: 5091687561413082744}
-  - component: {fileID: 5091687561413082746}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -302,21 +317,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5091687561413082746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5091687561413082751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2412543d75d7e4d4bb03a22db6b50aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 5091687561843368776}
-  lines: []
-  textSpeed: 0
 --- !u!1 &5091687561576390638
 GameObject:
   m_ObjectHideFlags: 0

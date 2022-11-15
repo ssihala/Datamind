@@ -18,7 +18,9 @@ public class AnswerChecker : MonoBehaviour
         {
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
-            gameObject.SetActive(false);
+            DialogueBox.display = false;
+            QuestionGenerator.randomize = true;
+            input.GetComponent<TMP_InputField>().text = "";
         }
         else
         {
