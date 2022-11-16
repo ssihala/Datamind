@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,7 @@ public class GridBasedPlayerMovement : MonoBehaviour
     float moveLimiter = 0.7f;
     public static float defaultSpeed = 1f;
 
-<<<<<<< Updated upstream
-    public float runSpeed = 20.0f;
-
-=======
     public static float runSpeed = 1f;
->>>>>>> Stashed changes
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -25,12 +21,11 @@ public class GridBasedPlayerMovement : MonoBehaviour
     void Update()
     {
         // Gives a value between -1 and 1
+        WaitForSecondsRealtime test = new WaitForSecondsRealtime(1);
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
     }
 
-<<<<<<< Updated upstream
-=======
     public static void toggleMovement()
     {
         if (runSpeed != 0)
@@ -40,9 +35,24 @@ public class GridBasedPlayerMovement : MonoBehaviour
     }
 
 
->>>>>>> Stashed changes
     void FixedUpdate()
     {
+        /*if(horizontal == 1)
+        {
+            body.position = new Vector2(body.position.x + 0.16f, body.position.y);
+        }
+        else if(horizontal == -1)
+        {
+            body.position = new Vector2(body.position.x - 0.16f, body.position.y);
+        }
+        if(vertical == 1)
+        {
+            body.position = new Vector2(body.position.x, body.position.y + 0.16f);
+        }
+        else if(vertical == -1)
+        {
+            body.position = new Vector2(body.position.x, body.position.y - 0.16f);
+        }*/
         if (horizontal != 0 && vertical != 0) // Check for diagonal movement
         {
             // limit movement speed diagonally, so you move at 70% speed

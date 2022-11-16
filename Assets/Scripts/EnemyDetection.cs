@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Old detection script, use TestCollider from now on (need to rename)
 public class EnemyDetection : MonoBehaviour
 {
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +17,14 @@ public class EnemyDetection : MonoBehaviour
     void Update()
     {
         GameObject player = GameObject.Find("Player");
+        Collider2D playerCol = player.GetComponent<Collider2D>();
+        Collider2D thisCol = this.GetComponent<Collider2D>();
+        if(playerCol.IsTouching(thisCol))
+        {
+            Debug.Log("TOUCHING");
+        }
+
+        /*GameObject player = GameObject.Find("Player");
         Vector3 directionToPlayer = player.transform.position - transform.position;
         float angle = Vector3.Angle(transform.forward, directionToPlayer);
         float distance = directionToPlayer.magnitude;
@@ -21,6 +32,7 @@ public class EnemyDetection : MonoBehaviour
         {
             Debug.Log("IN FRONT OF ME");
         }
+        */
 
     }
 }
