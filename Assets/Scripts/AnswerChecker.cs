@@ -18,6 +18,13 @@ public class AnswerChecker : MonoBehaviour
         {
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
+<<<<<<< Updated upstream
+=======
+            DialogueBox.display = false;
+            GridBasedPlayerMovement.toggleMovement();
+            QuestionGenerator.randomize = true;
+            input.GetComponent<TMP_InputField>().text = "";
+>>>>>>> Stashed changes
         }
         else
         {

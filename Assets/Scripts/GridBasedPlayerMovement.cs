@@ -9,9 +9,14 @@ public class GridBasedPlayerMovement : MonoBehaviour
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
+    public static float defaultSpeed = 1f;
 
+<<<<<<< Updated upstream
     public float runSpeed = 20.0f;
 
+=======
+    public static float runSpeed = 1f;
+>>>>>>> Stashed changes
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -24,6 +29,18 @@ public class GridBasedPlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
     }
 
+<<<<<<< Updated upstream
+=======
+    public static void toggleMovement()
+    {
+        if (runSpeed != 0)
+            runSpeed = 0;
+        else
+            runSpeed = defaultSpeed;
+    }
+
+
+>>>>>>> Stashed changes
     void FixedUpdate()
     {
         if (horizontal != 0 && vertical != 0) // Check for diagonal movement
