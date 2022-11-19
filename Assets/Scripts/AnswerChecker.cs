@@ -20,7 +20,7 @@ public class AnswerChecker : MonoBehaviour
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
             DialogueBox.display = false;
-            enemy.GetComponent<Renderer>().enabled = false;
+            Destroy(enemy);
             GridBasedPlayerMovement.toggleMovement();
             QuestionGenerator.randomize = true;
             input.GetComponent<TMP_InputField>().text = "";
