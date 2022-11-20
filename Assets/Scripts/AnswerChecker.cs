@@ -10,6 +10,7 @@ public class AnswerChecker : MonoBehaviour
 {
     public int expectedAnswer = 0;
     public GameObject input;
+    public GameObject enemy;
     void checkInput()
     {
         string ans = input.GetComponent<TMP_InputField>().text;
@@ -19,6 +20,7 @@ public class AnswerChecker : MonoBehaviour
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
             DialogueBox.display = false;
+            enemy.GetComponent<Renderer>().enabled = false;
             GridBasedPlayerMovement.toggleMovement();
             QuestionGenerator.randomize = true;
             input.GetComponent<TMP_InputField>().text = "";
