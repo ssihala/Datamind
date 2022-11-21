@@ -21,6 +21,7 @@ public class TestCollider : MonoBehaviour
     {
         dialogue.SetActive(true);
         DialogueBox.display = true;
+        GridBasedPlayerMovement.toggleMovement();
     }
     private void OnTriggerExit(Collider other)
     {
