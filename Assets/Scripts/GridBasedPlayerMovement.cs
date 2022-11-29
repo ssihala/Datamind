@@ -9,11 +9,12 @@ public class GridBasedPlayerMovement : MonoBehaviour
 
     float horizontal;
     float vertical;
-    float moveLimiter = 0.7f;
     public static float defaultSpeed = 1f;
+    float moveLimiter = 0.7f;
     public Animator animator;
-
     public static float runSpeed = 1f;
+    Vector2 movement;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -23,11 +24,12 @@ public class GridBasedPlayerMovement : MonoBehaviour
     {
         // Gives a value between -1 and 1
         WaitForSecondsRealtime test = new WaitForSecondsRealtime(1);
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        movement.x = Input.GetAxisRaw("Horizontal"); // -1 is left
+        movement.y = Input.GetAxisRaw("Vertical"); // -1 is down
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     public static void toggleMovement()
@@ -41,29 +43,13 @@ public class GridBasedPlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        /*if(horizontal == 1)
-        {
-            body.position = new Vector2(body.position.x + 0.16f, body.position.y);
-        }
-        else if(horizontal == -1)
-        {
-            body.position = new Vector2(body.position.x - 0.16f, body.position.y);
-        }
-        if(vertical == 1)
-        {
-            body.position = new Vector2(body.position.x, body.position.y + 0.16f);
-        }
-        else if(vertical == -1)
-        {
-            body.position = new Vector2(body.position.x, body.position.y - 0.16f);
-        }*/
-        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+        if (movement.x != 0 && movement.y != 0) // Check for diagonal movement
         {
             // limit movement speed diagonally, so you move at 70% speed
-            horizontal *= moveLimiter;
-            vertical *= moveLimiter;
+            movement.x *= moveLimiter;
+            movement.y *= moveLimiter;
         }
 
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        body.MovePosition(body.position + movement * runSpeed * Time.fixedDeltaTime);
     }
 }
