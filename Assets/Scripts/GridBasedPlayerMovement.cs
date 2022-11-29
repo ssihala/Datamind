@@ -11,6 +11,7 @@ public class GridBasedPlayerMovement : MonoBehaviour
     float vertical;
     float moveLimiter = 0.7f;
     public static float defaultSpeed = 1f;
+    public Animator animator;
 
     public static float runSpeed = 1f;
     void Start()
@@ -22,8 +23,11 @@ public class GridBasedPlayerMovement : MonoBehaviour
     {
         // Gives a value between -1 and 1
         WaitForSecondsRealtime test = new WaitForSecondsRealtime(1);
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
     }
 
     public static void toggleMovement()
