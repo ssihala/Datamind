@@ -8,18 +8,20 @@ using TMPro;
 // Aka if the question is 2 + 2, check for the correct answer
 public class AnswerChecker : MonoBehaviour
 {
-    public int expectedAnswer = 0;
     public GameObject input;
     public GameObject enemy;
+    private bool check = false;
     void checkInput()
     {
         string ans = input.GetComponent<TMP_InputField>().text;
-        expectedAnswer = QuestionGenerator.questions.ElementAt(QuestionGenerator.randomIndex).Value;
+        int expectedAnswer = QuestionGenerator.questions.ElementAt(QuestionGenerator.randomIndex).Value;
         if (ans == expectedAnswer.ToString())
         {
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
             DialogueBox.display = false;
+            // delete the enemy
+            // NEED TO ADD LOGIC TO ADD A KEY TO THE PLAYER
             Destroy(enemy);
             GridBasedPlayerMovement.toggleMovement();
             QuestionGenerator.randomize = true;
@@ -28,6 +30,7 @@ public class AnswerChecker : MonoBehaviour
         else
         {
             // Answer is wrong, do something based on the answer being wrong
+            // NEED TO ADD LOGIC TO REMOVE A HEART FROM THE PLAYER
             Debug.Log(ans);
         }
     }
@@ -41,9 +44,15 @@ public class AnswerChecker : MonoBehaviour
     void Update()
     {
         // Only check if the answer is correct when return is pressed
-        if(Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && check)
         {
             checkInput();
+            this.check = false;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+        // Only run the script on the enemy when the player enters its trigger
+    {
+        this.check = true;
     }
 }

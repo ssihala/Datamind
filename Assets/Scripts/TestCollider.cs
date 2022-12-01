@@ -23,6 +23,10 @@ public class TestCollider : MonoBehaviour
         DialogueBox.display = true;
         GridBasedPlayerMovement.toggleMovement();
     }
+/*    private void OnTriggerStay(Collider other)
+    {
+        ans.checkInput();
+    }*/
     private void OnTriggerExit(Collider other)
     {
         dialogue.SetActive(false);

@@ -27,9 +27,16 @@ public class QuestionGenerator : MonoBehaviour
     void initializeQuestions()
     {
         string[] playerData = LoginWrite.currUser;
+        if(playerData == null)
+        {
+            difficulty = 1;
+        }
+        else
+        {
+            Int32.TryParse(playerData[6], out difficulty);
+            Debug.Log(difficulty);
+        }
         // USERID,PASSWORD,LEVEL,ACCURACY,HEALTH,TIME,DIFFICULTY
-        Int32.TryParse(playerData[6], out difficulty);
-        Debug.Log(difficulty);
         switch (difficulty)
         {
             // setting 1: Only Addition
