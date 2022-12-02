@@ -22029,6 +22029,29 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &780785722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1796100415151335260, guid: cecd65413d2496e429d88925121760ab, type: 3}
+  m_PrefabInstance: {fileID: 445701961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780785728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780785722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce40c62302a41fd488b664f465acacba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinValue: 1
+  deathPenalty: 20
+  scoreText: {fileID: 0}
+  health3: {fileID: 1144321718}
+  health2: {fileID: 1250466299}
+  health1: {fileID: 1459450743}
 --- !u!1 &850139819
 GameObject:
   m_ObjectHideFlags: 0
