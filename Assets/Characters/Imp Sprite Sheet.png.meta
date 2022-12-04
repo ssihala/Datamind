@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_7
+      name: ImpWalk1
       rect:
         serializedVersion: 2
         x: 0
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_8
+      name: ImpWalk12
       rect:
         serializedVersion: 2
         x: 32
@@ -318,7 +318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_9
+      name: ImpWalk13
       rect:
         serializedVersion: 2
         x: 64
@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_10
+      name: ImpWalk14
       rect:
         serializedVersion: 2
         x: 96
@@ -360,7 +360,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_11
+      name: ImpWalk15
       rect:
         serializedVersion: 2
         x: 128
@@ -381,7 +381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_12
+      name: ImpWalk16
       rect:
         serializedVersion: 2
         x: 160
@@ -402,7 +402,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_13
+      name: ImpWalk17
       rect:
         serializedVersion: 2
         x: 192
@@ -423,7 +423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp Sprite Sheet_14
+      name: ImpWalk18
       rect:
         serializedVersion: 2
         x: 224
@@ -1739,10 +1739,9 @@ TextureImporter:
       Imp Sprite Sheet_66: -473711502
       Imp Sprite Sheet_72: 1108352624
       Imp Sprite Sheet_73: 1803883325
-      Imp Sprite Sheet_14: -151472094
       Imp Sprite Sheet_16: -419043184
       Imp Sprite Sheet_50: 493832172
-      Imp Sprite Sheet_7: 1154214850
+      ImpWalk12: 1232938927
       Imp Sprite Sheet_20: 249755979
       Imp Sprite Sheet_21: -846423131
       Imp Sprite Sheet_40: 236656456
@@ -1759,20 +1758,20 @@ TextureImporter:
       Imp Sprite Sheet_54: 1526292302
       ImpRightIdle4: 50348401
       ImpRightIdle6: -1542961165
+      ImpWalk1: 1154214850
       Imp Sprite Sheet_31: 2137918847
-      Imp Sprite Sheet_9: -1545145722
-      Imp Sprite Sheet_10: -1426063294
       Imp Sprite Sheet_45: -1374249952
       Imp Sprite Sheet_53: -1591485151
-      Imp Sprite Sheet_13: -1590950841
-      ImpDeath3: 2054997902
       ImpRightIdle7: -1436919065
+      ImpDeath3: 2054997902
+      ImpWalk13: -1545145722
       Imp Sprite Sheet_59: 90120334
       Imp Sprite Sheet_33: 696163387
       Imp Sprite Sheet_63: -120570354
       ImpDeath4: 64350996
       Imp Sprite Sheet_69: 348694167
       Imp Sprite Sheet_57: -1047063496
+      ImpWalk15: -1906651923
       Imp Sprite Sheet_52: 2006766123
       Imp Sprite Sheet_68: -768735310
       Imp Sprite Sheet_64: 98982451
@@ -1782,7 +1781,10 @@ TextureImporter:
       Imp Sprite Sheet_70: -1466969504
       Imp Sprite Sheet_41: -406196423
       Imp Sprite Sheet_39: 973152384
+      ImpWalk18: -151472094
       Imp Sprite Sheet_60: -516987630
+      ImpWalk14: -1426063294
+      ImpWalk16: -600291304
       Imp Sprite Sheet_43: -288089274
       Imp Sprite Sheet_48: -15358300
       ImpDeath5: 115730482
@@ -1790,7 +1792,7 @@ TextureImporter:
       ImpDeath2: 376764926
       ImpDeath6: 1689157841
       Imp Sprite Sheet_18: -904744984
-      Imp Sprite Sheet_8: 1232938927
+      ImpWalk17: -1590950841
       Imp Sprite Sheet_51: 725573951
       Imp Sprite Sheet_17: -979967489
       Imp Sprite Sheet_19: -282824796
@@ -1801,9 +1803,7 @@ TextureImporter:
       Imp Sprite Sheet_34: 1802600645
       Imp Sprite Sheet_74: -1634407345
       Imp Sprite Sheet_23: -1817883739
-      Imp Sprite Sheet_11: -1906651923
       Imp Sprite Sheet_49: 1799946379
-      Imp Sprite Sheet_12: -600291304
       Imp Sprite Sheet_38: -1962786084
       Imp Sprite Sheet_62: -276751987
       Imp Sprite Sheet_22: 54851494

@@ -234,7 +234,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_5
+      name: MinotaurWalk1
       rect:
         serializedVersion: 2
         x: 0
@@ -255,7 +255,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_6
+      name: MinotaurWalk12
       rect:
         serializedVersion: 2
         x: 96
@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_7
+      name: MinotaurWalk13
       rect:
         serializedVersion: 2
         x: 192
@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_8
+      name: MinotaurWalk14
       rect:
         serializedVersion: 2
         x: 288
@@ -318,7 +318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_9
+      name: MinotaurWalk15
       rect:
         serializedVersion: 2
         x: 384
@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_10
+      name: MinotaurWalk16
       rect:
         serializedVersion: 2
         x: 480
@@ -360,7 +360,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_11
+      name: MinotaurWalk17
       rect:
         serializedVersion: 2
         x: 576
@@ -381,7 +381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet_12
+      name: MinotaurWalk18
       rect:
         serializedVersion: 2
         x: 672
@@ -2626,6 +2626,7 @@ TextureImporter:
       Minotaur - Sprite Sheet_52: -1739220744
       Minotaur - Sprite Sheet_99: 1336636736
       Minotaur - Sprite Sheet_18: -85692131
+      MinotaurWalk16: -1347291497
       Minotaur - Sprite Sheet_87: 1370669590
       MinotaurRightIdle1: 1765339847
       Minotaur - Sprite Sheet_33: -1704184830
@@ -2641,20 +2642,19 @@ TextureImporter:
       Minotaur - Sprite Sheet_19: 1869015811
       Minotaur - Sprite Sheet_88: 2009601038
       Minotaur - Sprite Sheet_48: 1879012765
-      Minotaur - Sprite Sheet_8: -1369662009
+      Minotaur - Sprite Sheet_71: 1247162120
       Minotaur - Sprite Sheet_35: -743394358
       Minotaur - Sprite Sheet_73: 538213873
       Minotaur - Sprite Sheet_44: -1226747575
       Minotaur - Sprite Sheet_107: 1687219331
       Minotaur - Sprite Sheet_110: 1573721892
-      Minotaur - Sprite Sheet_71: 1247162120
       Minotaur - Sprite Sheet_28: -877168634
       Minotaur - Sprite Sheet_92: -1734401797
       Minotaur - Sprite Sheet_64: 542744666
       Minotaur - Sprite Sheet_66: -1405983913
-      Minotaur - Sprite Sheet_7: 746124323
       Minotaur - Sprite Sheet_32: 305232070
       MinotaurDeath1: -338910928
+      MinotaurWalk13: 746124323
       Minotaur - Sprite Sheet_29: 2042703593
       Minotaur - Sprite Sheet_26: -501698919
       Minotaur - Sprite Sheet_111: -449830874
@@ -2671,10 +2671,11 @@ TextureImporter:
       Minotaur - Sprite Sheet_63: -424446212
       MinotaurDeath6: 1032683349
       Minotaur - Sprite Sheet_24: 1974863896
-      Minotaur - Sprite Sheet_10: -1347291497
       Minotaur - Sprite Sheet_14: -1991180525
       MinotaurRightIdle3: -2090043248
+      MinotaurWalk17: -934393517
       Minotaur - Sprite Sheet_15: -2078676659
+      MinotaurWalk14: -1369662009
       Minotaur - Sprite Sheet_31: 1847322988
       MinotaurDeath3: -69294280
       Minotaur - Sprite Sheet_62: 1963827830
@@ -2691,12 +2692,13 @@ TextureImporter:
       Minotaur - Sprite Sheet_36: -1450295326
       Minotaur - Sprite Sheet_25: 233603492
       Minotaur - Sprite Sheet_83: -889054597
+      MinotaurWalk15: 61660174
       Minotaur - Sprite Sheet_47: -393797135
-      Minotaur - Sprite Sheet_59: 1621264988
       Minotaur - Sprite Sheet_42: 1601751009
-      Minotaur - Sprite Sheet_60: -447678181
+      Minotaur - Sprite Sheet_59: 1621264988
       Minotaur - Sprite Sheet_72: -1610560378
-      Minotaur - Sprite Sheet_113: -462307663
+      Minotaur - Sprite Sheet_60: -447678181
+      MinotaurWalk18: -674009796
       Minotaur - Sprite Sheet_81: -1194023985
       Minotaur - Sprite Sheet_30: 1235345277
       Minotaur - Sprite Sheet_70: -230363067
@@ -2704,30 +2706,28 @@ TextureImporter:
       Minotaur - Sprite Sheet_40: -100215047
       Minotaur - Sprite Sheet_20: -1158455069
       Minotaur - Sprite Sheet_117: -760158761
+      Minotaur - Sprite Sheet_113: -462307663
+      MinotaurWalk12: -1541675356
       Minotaur - Sprite Sheet_43: 1236831817
       Minotaur - Sprite Sheet_82: 1390266289
       Minotaur - Sprite Sheet_96: -993773477
-      Minotaur - Sprite Sheet_12: -674009796
       Minotaur - Sprite Sheet_39: -733614993
+      Minotaur - Sprite Sheet_109: 643521476
       Minotaur - Sprite Sheet_13: -857119703
       Minotaur - Sprite Sheet_86: -215491072
       Minotaur - Sprite Sheet_84: 1461201362
       MinotaurDeath4: 847582110
-      Minotaur - Sprite Sheet_109: 643521476
       Minotaur - Sprite Sheet_115: 1419921082
-      Minotaur - Sprite Sheet_9: 61660174
-      Minotaur - Sprite Sheet_5: -911612928
-      Minotaur - Sprite Sheet_11: -934393517
       Minotaur - Sprite Sheet_69: 1986512136
       Minotaur - Sprite Sheet_38: -901272785
       Minotaur - Sprite Sheet_65: 1256858434
       Minotaur - Sprite Sheet_78: 262352773
       Minotaur - Sprite Sheet_21: 2067785530
       Minotaur - Sprite Sheet_23: 2133470475
+      MinotaurWalk1: -911612928
       Minotaur - Sprite Sheet_90: -857664093
       Minotaur - Sprite Sheet_106: 161107197
       Minotaur - Sprite Sheet_93: -417637273
-      Minotaur - Sprite Sheet_6: -1541675356
       Minotaur - Sprite Sheet_116: -1479327537
       Minotaur - Sprite Sheet_79: -797291255
       Minotaur - Sprite Sheet_77: 1848971957
