@@ -10,8 +10,15 @@ public class AnswerChecker : MonoBehaviour
 {
     public int expectedAnswer = 0;
     public int playerHealth;
+    public static int enemyScore;
     public GameObject input;
     public GameObject enemy;
+
+    public static void setEnemyScore(int value)
+    {
+        enemyScore = value;
+    }
+
     void checkInput()
     {
         string ans = input.GetComponent<TMP_InputField>().text;
@@ -25,19 +32,19 @@ public class AnswerChecker : MonoBehaviour
             GridBasedPlayerMovement.toggleMovement();
             QuestionGenerator.randomize = true;
             input.GetComponent<TMP_InputField>().text = "";
+            //INCREASE SCORE
+            Score.increaseScore(enemyScore);
         }
         else
         {
             // Answer is wrong, do something based on the answer being wrong
             Debug.Log(ans);
             Health.playerDamage();
+            //DECREASE SCORE
+            Score.decreaseScore(enemyScore);
         }
     }
 
-    void playerDamage()
-    {
-
-    }
     // Start is called before the first frame update
     void Start()
     {

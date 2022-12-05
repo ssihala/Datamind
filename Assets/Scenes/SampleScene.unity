@@ -81631,6 +81631,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1423438342}
+    - target: {fileID: 6635704553944764795, guid: 8e84a9fdd78a59742980ace2f7602351, type: 3}
+      propertyPath: enemyScoreValue
+      value: 12345
+      objectReference: {fileID: 0}
     - target: {fileID: 6635704553944764797, guid: 8e84a9fdd78a59742980ace2f7602351, type: 3}
       propertyPath: m_RootOrder
       value: 2
