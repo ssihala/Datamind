@@ -34,6 +34,8 @@ public class AnswerChecker : MonoBehaviour
             input.GetComponent<TMP_InputField>().text = "";
             //INCREASE SCORE
             Score.increaseScore(enemyScore);
+            //ADD KEY
+            Keys.gainKey();
         }
         else
         {
