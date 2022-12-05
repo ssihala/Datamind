@@ -9,6 +9,7 @@ using TMPro;
 public class AnswerChecker : MonoBehaviour
 {
     public int expectedAnswer = 0;
+    public int playerHealth;
     public GameObject input;
     public GameObject enemy;
     void checkInput()
@@ -29,7 +30,13 @@ public class AnswerChecker : MonoBehaviour
         {
             // Answer is wrong, do something based on the answer being wrong
             Debug.Log(ans);
+            Health.playerDamage();
         }
+    }
+
+    void playerDamage()
+    {
+
     }
     // Start is called before the first frame update
     void Start()
