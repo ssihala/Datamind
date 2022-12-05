@@ -22,7 +22,7 @@ public class Enemy_Move : MonoBehaviour {
         animator.SetFloat("Horizontal", gameObject.GetComponent<Rigidbody2D>().velocity.x);
         animator.SetFloat("Speed", gameObject.GetComponent<Rigidbody2D>().velocity.sqrMagnitude);
 
-        if (hit.collider != null) {
+        if (hit.collider != null && hit.collider.tag != "Player") {
             Flip();
             //if (hit.collider.tag == "Player") {
               //  Destroy(hit.collider.gameObject);
