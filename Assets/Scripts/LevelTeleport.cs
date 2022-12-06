@@ -1,12 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //Make sure to add this, or you can't use SceneManager
 using UnityEngine.SceneManagement;
 
 
-public class Go_level_4 : MonoBehaviour
+public class LevelTeleport : MonoBehaviour
 {
+    public int nextScene;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,7 +15,7 @@ public class Go_level_4 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //The scene number to load (in File->Build Settings)
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(nextScene);
         }
     }
 }
