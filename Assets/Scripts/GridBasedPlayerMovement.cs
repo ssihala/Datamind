@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,29 +9,47 @@ public class GridBasedPlayerMovement : MonoBehaviour
 
     float horizontal;
     float vertical;
+    public static float defaultSpeed = 1f;
     float moveLimiter = 0.7f;
+    public Animator animator;
+    public static float runSpeed = 1f;
+    Vector2 movement;
 
-    public float runSpeed = 20.0f;
-    // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        // Gives a value between -1 and 1
+        WaitForSecondsRealtime test = new WaitForSecondsRealtime(1);
+        movement.x = Input.GetAxisRaw("Horizontal"); // -1 is left
+        movement.y = Input.GetAxisRaw("Vertical"); // -1 is down
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    private void FixedUpdate()
+    public static void toggleMovement()
     {
-        if (horizontal != 0 && vertical != 0)
+        if (runSpeed != 0)
+            runSpeed = 0;
+        else
+            runSpeed = defaultSpeed;
+    }
+
+
+    void FixedUpdate()
+    {
+        if (movement.x != 0 && movement.y != 0) // Check for diagonal movement
         {
-            horizontal *= moveLimiter;
-            vertical *= moveLimiter;
+            // limit movement speed diagonally, so you move at 70% speed
+            movement.x *= moveLimiter;
+            movement.y *= moveLimiter;
         }
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+
+        body.MovePosition(body.position + movement * runSpeed * Time.fixedDeltaTime);
     }
 }

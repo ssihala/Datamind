@@ -9,7 +9,17 @@ using TMPro;
 public class AnswerChecker : MonoBehaviour
 {
     public int expectedAnswer = 0;
+    public int playerHealth = Health.playerHealth;
+    public static int enemyScore;
+    private bool check = false;
     public GameObject input;
+    public GameObject enemy;
+
+    public static void setEnemyScore(int value)
+    {
+        enemyScore = value;
+    }
+
     void checkInput()
     {
         string ans = input.GetComponent<TMP_InputField>().text;
@@ -19,15 +29,26 @@ public class AnswerChecker : MonoBehaviour
             // Answer is correct, do something based on the answer being right
             DialogueBox.erase = true;
             DialogueBox.display = false;
+            Destroy(enemy);
+            GridBasedPlayerMovement.toggleMovement();
             QuestionGenerator.randomize = true;
+            Enemy_Move.move = true;
             input.GetComponent<TMP_InputField>().text = "";
+            //INCREASE SCORE
+            Score.increaseScore(enemyScore);
+            //ADD KEY
+            Keys.gainKey();
         }
         else
         {
             // Answer is wrong, do something based on the answer being wrong
-            Debug.Log(ans);
+            
+            Health.playerDamage();
+            //DECREASE SCORE
+            Score.decreaseScore(enemyScore);
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +59,15 @@ public class AnswerChecker : MonoBehaviour
     void Update()
     {
         // Only check if the answer is correct when return is pressed
-        if(Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && check)
         {
             checkInput();
+            //this.check = false;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    // Only run the script on the enemy when the player enters its trigger
+    {
+        this.check = true;
     }
 }

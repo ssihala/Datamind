@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Go_level_4 : MonoBehaviour
+/*public class Go_level_4 : MonoBehaviour
 {
 
     void OnTriggerEnter2D(Collider2D other)
@@ -17,4 +17,4 @@ public class Go_level_4 : MonoBehaviour
             SceneManager.LoadScene(6);
         }
     }
-}
+}*/
