@@ -35,7 +35,7 @@ public class Keys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerKeys);
+     
         switch (playerKeys)
         {
             case 1:
@@ -52,6 +52,7 @@ public class Keys : MonoBehaviour
                 break;
             case 5:
                 k5.SetActive(true);
+                Gate.openGate();
                 break;
             case 6:
                 k6.SetActive(true);

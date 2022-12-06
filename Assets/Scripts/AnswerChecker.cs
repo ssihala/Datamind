@@ -40,7 +40,7 @@ public class AnswerChecker : MonoBehaviour
         else
         {
             // Answer is wrong, do something based on the answer being wrong
-            Debug.Log(ans);
+            
             Health.playerDamage();
             //DECREASE SCORE
             Score.decreaseScore(enemyScore);
