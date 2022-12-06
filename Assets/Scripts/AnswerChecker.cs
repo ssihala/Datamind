@@ -14,6 +14,8 @@ public class AnswerChecker : MonoBehaviour
     private bool check = false;
     public GameObject input;
     public GameObject enemy;
+    public static int numAttempted = 0;
+    public static int numCorrect = 0;
 
     public static void setEnemyScore(int value)
     {
@@ -22,6 +24,7 @@ public class AnswerChecker : MonoBehaviour
 
     void checkInput()
     {
+        numAttempted++;
         string ans = input.GetComponent<TMP_InputField>().text;
         expectedAnswer = QuestionGenerator.questions.ElementAt(QuestionGenerator.randomIndex).Value;
         if (ans == expectedAnswer.ToString())
@@ -34,10 +37,11 @@ public class AnswerChecker : MonoBehaviour
             QuestionGenerator.randomize = true;
             Enemy_Move.move = true;
             input.GetComponent<TMP_InputField>().text = "";
-            //INCREASE SCORE
-            Score.increaseScore(enemyScore);
             //ADD KEY
             Keys.gainKey();
+            //INCREASE SCORE
+            Score.increaseScore(enemyScore);
+            numCorrect++;
         }
         else
         {

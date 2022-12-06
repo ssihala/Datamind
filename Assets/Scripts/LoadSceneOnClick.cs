@@ -12,9 +12,9 @@ public class LoadSceneOnClick : MonoBehaviour {
     {
         // USERID,PASSWORD,LEVEL,ACCURACY,HEALTH,TIME,DIFFICULTY
         string[] playerData = LoginWrite.currUser;
-        // default level is level 1
-        int index = 1;
-        Int32.TryParse(playerData[2], out index);
+        // default level is level 3 (Level 1)
+        int index = 3;
+        Int32.TryParse(playerData[1], out index);
         Debug.Log(index);
         LoadByIndex(index);
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class Health : MonoBehaviour
         if (playerHealth == 0)
         {
             h1.SetActive(false);
+            SceneManager.LoadScene(6);
             //DEATH
         }
     }

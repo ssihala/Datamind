@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1501739117}
+    - target: {fileID: 4077362303375129067, guid: a8849e592932a044c8999413b27bf4cb, type: 3}
+      propertyPath: enemyScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8849e592932a044c8999413b27bf4cb, type: 3}
 --- !u!1 &60400931
@@ -317,7 +321,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.12495899, y: 0.93632734}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -328,7 +332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.786873, y: 2.8726542}
   m_EdgeRadius: 0
 --- !u!212 &85742846
 SpriteRenderer:
@@ -372,7 +376,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5281,6 +5285,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1501739117}
+    - target: {fileID: 6864126808994184391, guid: 3d2247a32d6ed1643b85f6527a5bc915, type: 3}
+      propertyPath: enemyScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d2247a32d6ed1643b85f6527a5bc915, type: 3}
 --- !u!1 &1018272557
@@ -138224,6 +138232,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1501739117}
+    - target: {fileID: 6864126808994184391, guid: 3d2247a32d6ed1643b85f6527a5bc915, type: 3}
+      propertyPath: enemyScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d2247a32d6ed1643b85f6527a5bc915, type: 3}
 --- !u!1001 &1213193557
@@ -143856,6 +143868,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1501739117}
+    - target: {fileID: 5526134518785495991, guid: a2d824a302add5d40bca862d7268ab3d, type: 3}
+      propertyPath: enemyScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2d824a302add5d40bca862d7268ab3d, type: 3}
 --- !u!1 &1998810780
@@ -144050,6 +144066,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1501739117}
+    - target: {fileID: 817122419302132419, guid: 21954ae2ab5b5e0489dde560caf8d3ac, type: 3}
+      propertyPath: enemyScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 817122419302132422, guid: 21954ae2ab5b5e0489dde560caf8d3ac, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -144075,6 +144095,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 1501739117}
+    - target: {fileID: 2716860087821650102, guid: c0bc8271fecc48b4688b17ab336b0f56, type: 3}
+      propertyPath: enemyScoreValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4239175601690186393, guid: c0bc8271fecc48b4688b17ab336b0f56, type: 3}
       propertyPath: m_IsTrigger
       value: 1

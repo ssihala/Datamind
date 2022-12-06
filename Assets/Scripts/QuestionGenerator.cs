@@ -33,7 +33,7 @@ public class QuestionGenerator : MonoBehaviour
         }
         else
         {
-            Int32.TryParse(playerData[6], out difficulty);
+            Int32.TryParse(playerData[4], out difficulty);
             Debug.Log(difficulty);
         }
         // USERID,PASSWORD,LEVEL,ACCURACY,HEALTH,TIME,DIFFICULTY

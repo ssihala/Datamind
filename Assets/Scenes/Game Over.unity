@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 1013336409}
   - component: {fileID: 1013336408}
   - component: {fileID: 1013336411}
+  - component: {fileID: 1013336412}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -296,7 +297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271, y: -87.924805}
+  m_AnchoredPosition: {x: 271, y: -894}
   m_SizeDelta: {x: 441.3594, y: 205.8497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1013336408
@@ -346,6 +347,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1013336411}
         m_TargetAssemblyTypeName: RestScene, Assembly-CSharp
         m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1013336412}
+        m_TargetAssemblyTypeName: LoginWrite, Assembly-CSharp
+        m_MethodName: writeResults
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -405,6 +418,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f44558d39bd1534388980d9bf524c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1013336412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013336406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a8d1b1083f46a42b2cd4c7164fcc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userID: {fileID: 0}
+  difficulty: {fileID: 0}
 --- !u!1 &1043587053
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,12 +627,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d8cc32eac2ac344b810eba419d383ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7071dcc77c622574da1a9bbc3a378b52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 11.02}
+  m_Size: {x: 20, y: 10.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -725,7 +752,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -842,7 +869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 12}
+  m_AnchoredPosition: {x: -10, y: 12}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582509878
@@ -955,6 +982,7 @@ GameObject:
   - component: {fileID: 1816057750}
   - component: {fileID: 1816057749}
   - component: {fileID: 1816057748}
+  - component: {fileID: 1816057752}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -980,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -211, y: -87.924805}
+  m_AnchoredPosition: {x: 17, y: -87.924805}
   m_SizeDelta: {x: 441.3594, y: 205.8497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816057748
@@ -1050,6 +1078,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 1816057752}
+        m_TargetAssemblyTypeName: LoginWrite, Assembly-CSharp
+        m_MethodName: writeResults
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1816057750
 MonoBehaviour:
@@ -1089,6 +1129,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816057746}
   m_CullTransparentMesh: 1
+--- !u!114 &1816057752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816057746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a8d1b1083f46a42b2cd4c7164fcc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userID: {fileID: 0}
+  difficulty: {fileID: 0}
 --- !u!1 &1934620824
 GameObject:
   m_ObjectHideFlags: 0
