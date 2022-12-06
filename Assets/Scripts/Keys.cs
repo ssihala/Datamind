@@ -5,6 +5,7 @@ using UnityEngine;
 public class Keys : MonoBehaviour
 {
     public static int playerKeys;
+    public int numReq;
     GameObject k1, k2, k3, k4, k5, k6;
 
     public static void gainKey()
@@ -52,11 +53,14 @@ public class Keys : MonoBehaviour
                 break;
             case 5:
                 k5.SetActive(true);
-                Gate.openGate();
                 break;
             case 6:
                 k6.SetActive(true);
                 break;
+        }
+        if (playerKeys >= numReq)
+        {
+            Gate.openGate();
         }
     }
 }

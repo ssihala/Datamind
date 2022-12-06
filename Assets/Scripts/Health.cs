@@ -28,12 +28,12 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerHealth == 2)
+        if (playerHealth == 2)
         {
             //REMOVE HEART 3
             h3.SetActive(false);
         }
-        if(playerHealth == 1)
+        if (playerHealth == 1)
         {
             //REMOVE HEART 2
             h2.SetActive(false);
@@ -46,3 +46,4 @@ public class Health : MonoBehaviour
         }
     }
 }
+

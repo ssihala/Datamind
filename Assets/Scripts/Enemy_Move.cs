@@ -9,6 +9,7 @@ public class Enemy_Move : MonoBehaviour {
     public int XMoveDirection;
     public Animator animator;
     SpriteRenderer sprite;
+    public static bool move = true;
 
     void Start()
     {
@@ -17,25 +18,34 @@ public class Enemy_Move : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(XMoveDirection, 0), patrolDistance);
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-        animator.SetFloat("Horizontal", gameObject.GetComponent<Rigidbody2D>().velocity.x);
-        animator.SetFloat("Speed", gameObject.GetComponent<Rigidbody2D>().velocity.sqrMagnitude);
+        if (!move)
+        {
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        }
+        else
+        {
+            gameObject.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezePosition;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(XMoveDirection, 0), patrolDistance);
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
+            animator.SetFloat("Horizontal", gameObject.GetComponent<Rigidbody>().velocity.x);
+            animator.SetFloat("Speed", gameObject.GetComponent<Rigidbody>().velocity.sqrMagnitude);
 
-        if (hit.collider != null && hit.collider.tag != "Player") {
-            Flip();
-            //if (hit.collider.tag == "Player") {
-              //  Destroy(hit.collider.gameObject);
-            //}
-        }
-        //PLAYER DIRECTION
-        if (XMoveDirection < 0.0f)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (XMoveDirection > 0.0f)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
+            if (hit.collider != null && hit.collider.tag != "Player")
+            {
+                Flip();
+                //if (hit.collider.tag == "Player") {
+                //  Destroy(hit.collider.gameObject);
+                //}
+            }
+            //PLAYER DIRECTION
+            if (XMoveDirection < 0.0f)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (XMoveDirection > 0.0f)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
         }
     }
 

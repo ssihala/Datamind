@@ -9,8 +9,9 @@ using TMPro;
 public class AnswerChecker : MonoBehaviour
 {
     public int expectedAnswer = 0;
-    public int playerHealth;
+    public int playerHealth = Health.playerHealth;
     public static int enemyScore;
+    private bool check = false;
     public GameObject input;
     public GameObject enemy;
 
@@ -31,6 +32,7 @@ public class AnswerChecker : MonoBehaviour
             Destroy(enemy);
             GridBasedPlayerMovement.toggleMovement();
             QuestionGenerator.randomize = true;
+            Enemy_Move.move = true;
             input.GetComponent<TMP_InputField>().text = "";
             //INCREASE SCORE
             Score.increaseScore(enemyScore);
@@ -57,9 +59,15 @@ public class AnswerChecker : MonoBehaviour
     void Update()
     {
         // Only check if the answer is correct when return is pressed
-        if(Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && check)
         {
             checkInput();
+            //this.check = false;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    // Only run the script on the enemy when the player enters its trigger
+    {
+        this.check = true;
     }
 }

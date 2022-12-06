@@ -24,6 +24,7 @@ public class TestCollider : MonoBehaviour
         dialogue.SetActive(true);
         DialogueBox.display = true;
         GridBasedPlayerMovement.toggleMovement();
+        Enemy_Move.move = false;
         AnswerChecker.setEnemyScore(enemyScoreValue);
     }
     private void OnTriggerExit(Collider other)
