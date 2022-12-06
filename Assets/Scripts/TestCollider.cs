@@ -5,6 +5,8 @@ using UnityEngine;
 public class TestCollider : MonoBehaviour
 {
     public GameObject dialogue;
+    //NEEDS TO BE SET FOR EVERY ENEMY IN EDITOR
+    public int enemyScoreValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class TestCollider : MonoBehaviour
         dialogue.SetActive(true);
         DialogueBox.display = true;
         GridBasedPlayerMovement.toggleMovement();
+        Enemy_Move.move = false;
+        AnswerChecker.setEnemyScore(enemyScoreValue);
     }
 /*    private void OnTriggerStay(Collider other)
     {

@@ -297,7 +297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_8
+      name: CobraWalk1
       rect:
         serializedVersion: 2
         x: 0
@@ -318,7 +318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_9
+      name: CobraWalk2
       rect:
         serializedVersion: 2
         x: 32
@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_10
+      name: CobraWalk3
       rect:
         serializedVersion: 2
         x: 64
@@ -360,7 +360,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_11
+      name: CobraWalk4
       rect:
         serializedVersion: 2
         x: 96
@@ -381,7 +381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_12
+      name: CobraWalk5
       rect:
         serializedVersion: 2
         x: 128
@@ -402,7 +402,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_13
+      name: CobraWalk6
       rect:
         serializedVersion: 2
         x: 160
@@ -423,7 +423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_14
+      name: CobraWalk7
       rect:
         serializedVersion: 2
         x: 192
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_15
+      name: CobraWalk8
       rect:
         serializedVersion: 2
         x: 224
@@ -675,7 +675,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_26
+      name: CobraDeath1
       rect:
         serializedVersion: 2
         x: 0
@@ -696,7 +696,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_27
+      name: CobraDeath2
       rect:
         serializedVersion: 2
         x: 32
@@ -717,7 +717,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_28
+      name: CobraDeath3
       rect:
         serializedVersion: 2
         x: 64
@@ -738,7 +738,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_29
+      name: CobraDeath4
       rect:
         serializedVersion: 2
         x: 96
@@ -759,7 +759,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_30
+      name: CobraDeath5
       rect:
         serializedVersion: 2
         x: 128
@@ -780,7 +780,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cobra Sprite Sheet_31
+      name: CobraDeath6
       rect:
         serializedVersion: 2
         x: 160
@@ -813,35 +813,35 @@ TextureImporter:
     nameFileIdTable:
       Cobra Sprite Sheet_25: -1069263370
       CobraRightIdle8: -376073930
+      CobraWalk4: -452896600
       Cobra Sprite Sheet_17: 2019741521
-      Cobra Sprite Sheet_27: -1873113500
-      Cobra Sprite Sheet_31: 2120750491
+      CobraWalk6: -1747197309
+      CobraDeath1: 526180619
       Cobra Sprite Sheet_23: 1354513389
       CobraRightIdle3: 734691430
-      Cobra Sprite Sheet_12: -330460610
-      Cobra Sprite Sheet_28: 1208990993
+      CobraRightIdle5: -1254405970
       CobraRightIdle2: 1907442503
       CobraRightIdle6: 2104891094
-      Cobra Sprite Sheet_8: 1728377796
-      Cobra Sprite Sheet_26: 526180619
-      CobraRightIdle5: -1254405970
-      Cobra Sprite Sheet_9: -395508850
+      CobraWalk1: 1728377796
+      CobraDeath4: -1944123740
+      CobraDeath6: 2120750491
+      CobraWalk5: -330460610
       Cobra Sprite Sheet_20: 1596554784
-      Cobra Sprite Sheet_16: 876674570
-      Cobra Sprite Sheet_29: -1944123740
       CobraRightIdle7: -1225745154
+      Cobra Sprite Sheet_16: 876674570
+      CobraWalk2: -395508850
+      CobraWalk8: 940764379
+      CobraWalk7: -1342794779
       Cobra Sprite Sheet_21: 1603616185
-      Cobra Sprite Sheet_10: 299215022
-      Cobra Sprite Sheet_15: 940764379
-      Cobra Sprite Sheet_13: -1747197309
+      CobraDeath3: 1208990993
       CobraRightIdle4: 1078973907
+      CobraDeath2: -1873113500
       Cobra Sprite Sheet_18: -826857957
-      Cobra Sprite Sheet_30: -297176807
-      Cobra Sprite Sheet_14: -1342794779
-      Cobra Sprite Sheet_11: -452896600
-      Cobra Sprite Sheet_24: 1993571951
+      CobraDeath5: -297176807
       Cobra Sprite Sheet_19: -1968280269
+      Cobra Sprite Sheet_24: 1993571951
       Cobra Sprite Sheet_22: -411763642
+      CobraWalk3: 299215022
       CobraRightIdle1: 641057791
   spritePackingTag: 
   pSDRemoveMatte: 0
